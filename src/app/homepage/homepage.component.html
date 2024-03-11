@@ -1,0 +1,168 @@
+<section class="text-center position-relative">
+    <!-- Introduction -->
+    <div class="row ">
+        <div class="col-lg-12 p-0 m-0 ">
+            <img src="./assets/HomePage.png" class=" position-relative " alt="" style="width: 100%; height: 500px">
+            <h1 class="position-absolute   text-white" style="top: 7%; left: 30%;">Where curiosity meets computation. <br> Welcome to our AI department.</h1>
+        </div>
+    </div>
+
+    <!-- About AI Department -->
+    <div class="row justify-content-center p-5 bg-light">
+        <div class="col-lg-6">
+            <p>Welcome to Misr University For Science And Technology's Artificial Intelligence Department! We're dedicated to advancing AI research, education, and innovation. Our passionate team explores AI's potential in machine learning, natural language processing, computer vision, and robotics. With cutting-edge courses, facilities, and research opportunities, we invite students and professionals to join us in shaping the future of technology through AI.</p>
+            <a class="btn btn-success text-white text-decoration-none" routerLink="/about"  routerLinkActive="bg-success text-white rounded-3">About Us</a>
+        </div>
+    </div>
+
+    <!-- Things You'll Learn -->
+    <div class="p-5 ">
+        <div class="text-white">
+            <h2 class="mb-lg-5 text-dark">Things You'll Learn</h2>
+            <div class="container">
+                <!-- Learning topics -->
+                <div class="d-flex justify-content-center align-items-center mb-2">
+                    <!-- Topic 1 -->
+                    <div class="button-like bg-success" style="margin: auto;">
+                        <div class="dot" style="margin-left: 10px;"></div>
+                        <div class="name">Quantum Machine Learning</div>
+                    </div>
+                    <!-- Topic 2 -->
+                    <div class="button-like maincolor" style="margin: auto;">
+                        <div class="dot"></div>
+                        <div class="name">Learn Machine Learning</div>
+                    </div>
+                    <!-- Topic 3 -->
+                    <div class="button-like bg-success" style="margin: auto;">
+                        <div class="dot" style="margin-left: 20px;"></div>
+                        <div class="name">Learn NLP</div>
+                    </div>
+                </div>
+
+                <!-- More learning topics -->
+                <div class="d-flex justify-content-center align-items-center mb-2">
+                    <!-- Topic 4 -->
+                    <div class="button-like maincolor" style="margin-right: 7%;">
+                        <div class="dot"></div>
+                        <div class="name">Computer Vision</div>
+                    </div>
+                    <!-- Topic 5 -->
+                    <div class="button-like maincolor" style="margin-left: 7%;">
+                        <div class="dot"></div>
+                        <div class="name">AI for Cybersecurity</div>
+                    </div>
+                </div>
+
+                <!-- Even more learning topics -->
+                <div class="d-flex justify-content-center align-items-center mb-2">
+                    <!-- Topic 6 -->
+                    <div class="button-like bg-success" style="margin: auto;">
+                        <div class="dot"></div>
+                        <div class="name">AI and Robotics</div>
+                    </div>
+                    <!-- Topic 7 -->
+                    <div class="button-like maincolor" style="margin: auto;">
+                        <div class="dot"></div>
+                        <div class="name">Learn to build a portfolio</div>
+                    </div>
+                    <!-- Topic 8 -->
+                    <div class="button-like bg-success" style="margin: auto;">
+                        <div class="dot"></div>
+                        <div class="name text-center">Reinforcement Learning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- Department Members Section -->
+<div class="bg-light">
+    <div class="container p-5">
+        <!-- Department Members Title -->
+        <h2 class="text-center mb-3">Department Members</h2>
+        <!-- Underline -->
+        <div class="underline mb-lg-5 bg-success"></div>
+        <div class="row justify-content-center">
+            <!-- Member 1 -->
+            <div class="col-3 mb-4 m-5" *ngFor="let src of srcsofdepartment; let i=index">
+                <div class="member-card card ">
+                    <!-- Image -->
+                    <img src=""[src]='src' class="img-fluid card-img-top lazyload img-thumbnail" alt="Member Image">
+                    <!-- Details -->
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{ tittlesNames[i] }}</h5>
+                        <a routerLink="{{link[i]}}" class="btn btn-success d-block mx-auto">See Details <i class="fa fa-arrow-right ms-2" style="margin-top: 5px;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button -->
+        <div class="text-center mt-4">
+            <a href="/departmentmembers" class="btn btn-outline-success">See All</a>
+        </div>
+    </div>
+</div>
+
+<!-- Projects Section -->
+<div class="container p-5">
+    <!-- Project Title -->
+    <h2 class="text-center mb-3">Projects</h2>
+    <!-- Underline -->
+    <div class="underline mb-lg-5 bg-success"></div>
+    <div class="row justify-content-center">
+        <!-- Project 1 -->
+        <div class="col-md-3 mb-4 m-5" *ngFor="let src of srcsofprojects; let i=index">
+            <div class="project-card card">
+                <!-- Image -->
+                <img src="./assets/placeholder.jpg" data-src="{{src}}" class="img-fluid card-img-top lazyload img-thumbnail" alt="Project Image">
+                <!-- Details -->
+                <div class="card-body">
+                    <h5 class="card-title">{{ projectsNames[i] }}</h5>
+                    <a routerLink="/project" class="btn btn-success d-block">See Course Guide <i class="fa fa-arrow-right  ms-2" style="margin-top: 5px;"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Button -->
+    <div class="text-center mt-4">
+        <a href="/projects" class="btn btn-outline-success">See All</a>
+    </div>
+</div>
+
+
+
+    <!-- we are here to help Section -->
+    <div class="bg-light p-5">
+    <div class="p-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="row">
+                    <!-- Image on the right side -->
+                    <div class="col-md-6">
+                        <img src="./assets/6.png" class="img-fluid" alt="Image" style="width: 350px;">
+                    </div>
+                    <!-- Content on the left side -->
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div>
+                            <!-- Title -->
+                            <h2>We're Here to Help</h2>
+                            <!-- Paragraph -->
+                            <p>Read through our FAQs and, if you can't find what you're looking for, our experts will be happy to answer your questions.</p>
+                            <!-- Buttons -->
+                            <div class="d-flex justify-content-center align-items-center">
+                                <button class="btn btn-success me-2">Read FAQs</button>
+                                <!-- Message icon -->
+                              <a href="" class="text-decoration-none text-body-tertiary"><i class="fas fa-envelope me-2"></i>Ask a Question</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</section>

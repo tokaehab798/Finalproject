@@ -1,0 +1,20 @@
+<section class="p-5">
+    <div class="d-flex justify-content-center align-items-center">
+<a ><button class="btn btn-success ">Artificial Intelligence</button></a>
+</div>
+<div class="container">
+    <div class="row g-5 d-flex justify-content-center align-items-center p-5">
+        <div class="col-6 " *ngFor="let src of srcs"> 
+            <div class="rounded-3 position-relative overflow-hidden ">
+                 <img class="img-fluid rounded  " [src]='src' alt="">
+                 <div (click)="flag=false; modelImag=src "  class="layer__ rounded text-white position-absolute maincolorbackground start-0 h-100 w-100 top-0 d-flex justify-content-center align-items-center">
+                     <i class="fa-solid fa-plus fa-7x"></i>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+<div (click)="hideelement($event.target,img)" [class.d-none]="flag" class=" model__ position-fixed start-0 w-100 h-100 top-0 bg-black bg-opacity-25 d-flex justify-content-center align-items-center">
+    <img #img [src]="modelImag" alt="" style="width: 80%;">
+</div>
+</section>

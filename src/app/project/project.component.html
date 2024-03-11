@@ -1,0 +1,71 @@
+<section class="container">
+    <!-- Competition Section -->
+        <!-- Go Back Link -->
+        <div class="go-back-container "style="margin-left:20px; margin-top:20px;">
+            <a href="/projects" class="go-back-link">
+                <i class="fas fa-arrow-left"></i> Go Back
+            </a>
+        </div>
+    <div class="p-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Image Section -->
+                <div class="col-md-4">
+                    <img src="./assets/project4.png" class="img-fluid" alt="Competition Image" style="width: 450px;">
+                </div>
+                <!-- Content Section -->
+                <div class="col-md-8 d-flex align-items-start">
+                    <div>
+                        <!-- Title -->
+                        <h2>Automated Fruit Harvesting and Classification System using ML</h2>
+                     
+                        <!-- Paragraph -->
+                        <p>Embarked on a pioneering project fusing machine learning and robotics to automate fruit classification and sorting. Utilizing a remote ML model, fruits are accurately classified, triggering signals to a robotic arm for seamless picking and sorting into designated bowls. This interdisciplinary endeavor not only pushes the boundaries of AI and robotics but also offers valuable hands-on experience for all participants. Through this innovative synergy of technologies, we've not only accomplished efficient fruit sorting but also gained profound insights into the intersection of machine learning and robotics, paving the way for future advancements in automation and beyond.</p>     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Picture Section -->
+    <div class="p-3">
+        <div class="container">
+        <div class="row justify-content-center mb-5 container align-items-center">
+            <div class="col-md-4" *ngFor="let src of srcsofproject; let i=index">
+                <div class="member">
+                    <!-- Image -->
+                    <div class="d-flex justify-content-center">
+                        <img src="" class="img-fluid" alt="Project Image" [src]='src' style="width: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+                    
+    </div>
+    </div>
+
+    <!-- Team Members Section -->
+    <div class="pb-5">
+        <div class="container p-5">
+            <!-- Team Members Title -->
+            <h2 class=" mb-3">Project Team Members</h2>
+            <!-- Underline -->
+            <div class="underline mb-lg-5 bg-success"></div>
+
+            <!-- Team Members -->
+            <div class="d-flex justify-content-center flex-wrap">
+                <div class="text-center mx-5 mb-3" *ngFor="let src of srcsofprojectteam; let i=index">
+                    <!-- Team Member Image -->
+                    <img src="" [src]="src" class="rounded-circle" alt="Person 1" style="width: 170px; height: 170px;">
+                    <!-- Team Member Name -->
+                    <div class="mt-2">
+                        <h4>{{srcsofteamname[i]}}</h4>
+                        <!-- Team Member Role -->
+                        <p>Student</p>
+                    </div>
+              
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,89 @@
+<section class="bg-light">
+    <!-- Go Back Link -->
+    <div class="go-back-container" style="margin-left: 20px;">
+        <a href="javascript:history.back()" class="go-back-link">
+            <i class="fas fa-arrow-left"></i> Go Back
+        </a>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-3 text-center d-flex flex-column align-items-center">
+                <!-- Circular Image -->
+                <div class="circle-img mb-3" style="width: 200px; height: 200px;">
+                    <img src="./assets/dr rania.png" alt="Member 1" class="rounded-circle img-fluid">
+                </div>
+                <!-- Name -->
+                <h4>Rania ElGohary</h4>
+                <!-- Position -->
+                <p class="text-muted">Professor</p>
+            </div>
+        </div>
+    </div>
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-tabs justify-content-center card-header-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="activeTab === 'subjects'" [class.text-success]="activeTab === 'subjects'" (click)="showSubjects()">Brief</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="activeTab === 'image'" [class.text-success]="activeTab === 'image'" (click)="showImage()">Research Paper</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="activeTab === 'history'" [class.text-success]="activeTab === 'history'" (click)="showHistory()">Subject History</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <div *ngIf="showSubjectsFlag" class="research-paper">
+                <div class="shadow p-3 mb-2 bg-white rounded">
+                    <h5 class="card-title mb-4">About Dr. Rania ElGohary</h5>
+                    <p class="mb-4">Dr. Rania ElGohary is an esteemed figure in the field of Artificial Intelligence (AI), currently serving as the Dean of the AI Department at Misr University for Science and Technology. With a distinguished academic career, she previously held the position of Professor of Artificial Intelligence at the Faculty of Computer and Information Sciences (FCIS) at Ain Shams University. Dr. Rania ElGohary brings a wealth of experience and expertise to her role, having studied Information Science at the Faculty of Computer and Information Sciences. Her dedication to advancing AI education and research is evident through her leadership and contributions to academia, making her a valuable asset to both institutions and the broader AI community.</p>
+                </div>
+            </div>
+
+            <div *ngIf="showImageFlag" class="research-paper d-flex justify-content-center align-items-center" style="width: 100%; height: 600px;">
+                <embed src="./assets/Researchpaper.pdf" frameborder="0" style="width: 80%; height: 100%;" sandbox="allow-scripts" readonly>
+            </div>
+
+            <div *ngIf="showHistoryFlag" class="research-paper">
+                <h5 class="card-title">Subjects</h5>
+                <div class="shadow-sm p-3 rounded">
+                    <table class="table table-bordered ">
+                        <thead>
+                            <tr>
+                                <th>Subject Code</th>
+                                <th>Subject Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AI301</td>
+                                <td>NLP</td>
+                            </tr>
+                            <tr>
+                                <td>AI401</td>
+                                <td>Introduction to Robotics</td>
+                            </tr>
+                            <tr>
+                                <td>AI521</td>
+                                <td>Algorithms</td>
+                            </tr>
+                            <tr>
+                                <td>AI212</td>
+                                <td>Pattern Recognition</td>
+                            </tr>
+                            <tr>
+                                <td>AI315</td>
+                                <td>Robotics</td>
+                            </tr>
+                            <tr>
+                                <td>AI481</td>
+                                <td>Embedded Systems</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

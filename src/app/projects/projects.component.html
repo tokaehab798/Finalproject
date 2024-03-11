@@ -1,0 +1,33 @@
+<section>
+    <div class="container p-5">
+        <!-- project  Title -->
+        <h2 class="text-center mb-3">Projects</h2>
+      
+        <!-- Underline -->
+        <div class="underline mb-lg-5 bg-success"></div>
+      
+      
+        <div class="row justify-content-center mb-5">
+            <!-- project 1 -->
+        <div class="col-md-4" *ngFor="let src of srcsofprojects; let i=index">
+            <div class="member">
+                <!-- Image -->
+                <div class="d-flex justify-content-center">
+                    <img src="" class="img-fluid img-thumbnail" alt="Image 1" [src]='src' style="width: 350px;">
+                </div>
+                <!-- Details -->
+                <div>
+                    <!-- ab2y 7oty di lma t3mly array b asamy l prjects mkan l ....{{ projectsNames[i] }}-->
+                    <h5 class="mt-3" style="text-align: center;">{{projectname[i]}}</h5>
+                    <a routerLink="/project" class="text-decoration-none d-flex justify-content-center align-items-center text-success mb-3">
+                        <p class="mb-0">See More Details</p>
+                        <i class="fa fa-arrow-right  ms-2" style="margin-top: 5px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+
+    </div>
+    </div>
+</section>

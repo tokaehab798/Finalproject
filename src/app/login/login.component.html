@@ -1,0 +1,48 @@
+<section class="h-50" style="background-color: #eee;">
+  <div class="container py-3 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-xl-8">
+        <div class="card rounded-3 shadow-lg">
+         <!-- <div class="position-absolute top-0 start-0 mt-3 ms-3">
+            <a href="" class="text-maincolor">
+             <i class="fa-solid fa-home text-maincolor position-absolute fs-4 " style="top: 50px; left: 30px;"></i>
+            </a>
+          </div>-->
+          <div class="row g-0">
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+              <div class="card-body p-md-4">
+                <div class="text-center mb-4">
+                  <h2 class="display-5 text-uppercase mb-3">Welcome</h2>
+                  <p class="lead">Login to continue</p>
+                </div>
+                <form>
+                  <div class="mb-3">
+                    <label for="LoginID" class="form-label text-muted top-0 position-relative" [class.top__]="!UserID.length">ID</label>
+                    <input type="text" id="LoginID" name="LoginID" class="form-control shadow-none fw-light" [(ngModel)]="UserID" placeholder="Enter your ID">
+                  </div>
+                  <div class="mb-3">
+                    <label for="LoginPassword" class="form-label text-muted top-0 position-relative" [class.top__]="!UserPassword.length">Password</label>
+                    <input type="password" id="LoginPassword" name="LoginPassword" class="form-control fw-light shadow-none" [(ngModel)]="UserPassword" placeholder="Enter your Password">
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" name="checkbox" class="form-check-input shadow" id="rememberMe">
+                    <label for="rememberMe" class="form-check-label text-muted">Remember Me</label>
+                  </div>
+                  <div class="text-center">
+                    <button class="btn btn-success btn-lg px-4 mb-2" type="button" routerLink="/home">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+              <img src="./assets/login.jpg" alt="Login Image" class="img-fluid rounded">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  

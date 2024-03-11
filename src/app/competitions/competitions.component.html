@@ -1,0 +1,30 @@
+<section class="p-5">
+    <div class="container">
+        <!-- Row for each training source -->
+        <div class="row justify-content-center">
+            <!-- Column for each training item -->
+            <div class="col-md-4 mb-3 d-flex justify-content-center" *ngFor="let src of srcsofcompetitions; let i=index">
+                <!-- New card structure -->
+                <div class="card shadow" style="width: 25rem;">
+                    <!-- Training item image -->
+                    <div style="height: 200px; overflow: hidden; ">
+                        <img src="" class="card-img-top" [src]="src" alt="..." style="object-fit: cover; height: 100%;">
+                    </div>
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <!-- Training item title -->
+                        <h4 class="card-title">{{ tittlesNames[i] }}</h4>
+                        <!-- Training item description -->
+                        <p class="card-text text-muted">{{tittlediscription[i]}}</p>
+                      <div class="d-flex justify-content-between">
+                        <p class="fw-bold">From 12dec to 2jan</p>
+                        <!-- Button to apply for training -->
+                        <button class="btn btn-success" routerLink="/competition">Register now</button>
+                      </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

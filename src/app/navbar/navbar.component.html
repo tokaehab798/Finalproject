@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" [class.py-4]="!isScrolling" id="navbar-example2">
+  <div class="container">
+      <!-- Logo -->
+      <div class="col-auto me-auto"> <!-- Moved logo to the left -->
+          <a class="navbar-brand" href=""><img src="./assets/must logo - no background.png" alt="" style="width: 70px; height:60px ;"></a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <!-- Navbar Links -->
+              <li class="nav-item">
+                  <a class="nav-link fs-6 ms-2" routerLink="home" routerLinkActive="bg-success text-white rounded-3 ">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link fs-6 ms-2" routerLink="about" routerLinkActive="bg-success text-white rounded-3">About</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 ms-2"  routerLink="departmentmembers" routerLinkActive="bg-success text-white rounded-3">Department Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 ms-2"  routerLink="sucessstories" routerLinkActive="bg-success text-white rounded-3">Success Stories</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link fs-6 ms-2"  routerLink="competitions" routerLinkActive="bg-success text-white rounded-3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Competitions
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 ms-2"  routerLink="projects" routerLinkActive="bg-success text-white rounded-3">projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 ms-2"  routerLink="form" routerLinkActive="bg-success text-white rounded-3">Form</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fs-6 ms-2"  role="button"  data-bs-toggle="dropdown" aria-expanded="false">
+              Training
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="trainingexternal" routerLinkActive="bg-success text-white">External Training</a></li>
+              <li><a class="dropdown-item" routerLink="training">Inernal Training</a></li>
+          
+            </ul>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link fs-6 ms-2" routerLink="studyplan" routerLinkActive="bg-success text-white rounded-3">Study Plan</a>
+          </li>
+         
+        </ul>
+        
+
+        <form class="d-flex">
+          <a class="btn btn-outline-success shadow btn text-center" type="button" routerLink="login">Sign out</a>
+        </form>
+      </div>
+    </div>
+  </nav>

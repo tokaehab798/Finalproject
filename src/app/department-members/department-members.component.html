@@ -1,0 +1,23 @@
+<section class="departments-section p-5">
+    <div class="container p-5">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <h2 class="text-center mb-5">Meet Our Team</h2>
+                <div class="row justify-content-center">
+                   
+                    <div class="col-md-3 text-center mb-4" *ngFor="let src of memberssrcs; let i=index">
+                        <div class="circle-img">
+                            <img src="" alt="Member 1" [src]='src' class="rounded-circle img-fluid" style="width: 250px;">
+                        </div>
+                        <h5 class="mt-2">{{Departmentmembername[i]}}</h5>
+                        <p class="mb-0 mt-0">{{AssistentOrDr[i]}}</p>
+                        <a href="{{link[i]}}" class="text-success text-decoration-none">view Profile</a>
+                    </div>
+                
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+

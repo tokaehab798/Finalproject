@@ -1,0 +1,75 @@
+<section class="container">
+    <div class="go-back-container">
+        <a href="javascript:history.back()" class="go-back-link">
+            <i class="fas fa-arrow-left"></i> Go Back
+        </a>
+    </div>
+    <!-- Competition Section -->
+    <div class="p-5">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <!-- Image Section -->
+                <div class="col-md-4">
+                    <img src="./assets/competition3.jpg" class="img-fluid" alt="Competition Image" style="width: 450px;">
+                </div>
+                <!-- Content Section -->
+                <div class="col-md-8 d-flex align-items-center">
+                    <div>
+                        <!-- Title -->
+                        <h2>AWS Climathon hackathon Competition</h2>
+                        <!-- Award -->
+                        <h5>1'st place</h5>
+                        <!-- Paragraph -->
+                        <p>The AWS Climathon hackathon held in 2022 at Misr University in Egypt provided a platform for passionate innovators to address pressing climate challenges using cutting-edge technology. Participants collaborated to develop innovative solutions leveraging Amazon Web Services (AWS) to tackle issues such as environmental sustainability, renewable energy, and climate resilience. Through this hackathon, aspiring entrepreneurs, engineers, and environmentalists came together to ideate, prototype, and present solutions aimed at making a positive impact on the environment. The event fostered creativity, collaboration, and technological advancement in the pursuit of a more sustainable future for Egypt and beyond.</p>     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Picture Section -->
+    <div class="p-3">
+        <div class="row justify-content-center mb-5 container align-items-center">
+            <div class="col-md-4" *ngFor="let src of srcsofprojects; let i=index">
+                <div class="member">
+                    <!-- Image -->
+                    <div class="d-flex justify-content-center">
+                        <img src="" class="img-fluid" alt="Project Image" [src]='src' style="width: 350px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div style="width: 100%; height: 0; padding-bottom: 56.25%; position: relative; margin-bottom: -25%;">
+        <iframe src="https://www.youtube.com/embed/zJx_AujshZY" style="position: absolute; width: 100%; height: 50%; top: 0; left: 0;" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+
+    <!-- Team Members Section -->
+    <div class="">
+        <div class="container p-5">
+            <!-- Team Members Title -->
+            <h2 class="text-center mb-3">Team Members</h2>
+            <!-- Underline -->
+            <div class="underline mb-lg-5 bg-success"></div>
+
+            <!-- Team Members -->
+            <div class="d-flex justify-content-center flex-wrap">
+                <div class="text-center mx-5 mb-3" *ngFor="let src of compmember; let i=index">
+                    <!-- Team Member Image -->
+                    <img src="{{compmember[i]}}" class="rounded-circle" alt="Person 1" style="width: 170px; height: 170px;">
+                    <!-- Team Member Name -->
+                    <div class="mt-2">
+                        <h4>{{compName[i]}}</h4>
+                        <!-- Team Member Role -->
+                        <p>Student</p>
+                    </div>
+              
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

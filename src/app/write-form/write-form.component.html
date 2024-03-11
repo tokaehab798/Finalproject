@@ -1,0 +1,40 @@
+<section class="p-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="p-4 bg-light rounded" style="max-width: 700px;">
+                <form action="">
+                    <div class="row mb-3 align-items-center">
+                        <!-- Form Type -->
+                        <div class="col-auto">
+                            <p class="fw-bold me-2">Form Type:</p>
+                        </div>
+                        <!-- Dropdown -->
+                        <div class="col dropdown-center">
+                            <div class="dropdown">
+                                <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Select Form
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Subject Hours</a></li>
+                                    <li><a class="dropdown-item" href="#">OverLoad Hours</a></li>
+                                    <li><a class="dropdown-item" href="#">Subjects Request</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Description -->
+                    <div>
+                        <p class="strong fw-bold top-0 position-relative ToBeUp" [class.top__]="!Description.length">Description:</p>
+                        <textarea name="Description" id="" cols="40" rows="3" placeholder="Write Your Problem" style="resize: none;" class="form-control shadow-none position-relative border-0"  [(ngModel)]="Description"></textarea>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="d-flex justify-content-end mt-3">
+                        <button class="btn btn-success">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

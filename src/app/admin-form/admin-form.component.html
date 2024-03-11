@@ -1,0 +1,64 @@
+<section class="p-5">
+    <div class="container" style="max-width: 900px;">
+        <div>
+            <div class="row p-3 bg-light align-items-center forms-row rounded" *ngFor="let form of srcsofforms; let i = index">
+                <!-- Image Column -->
+                <div class="col-lg-4">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img [src]="form.src" alt="" [style.width]="form.imageWidth" class="img-fluid">
+                    </div>
+                </div>
+                <!-- Text Column -->
+                <div class="col-lg-8">
+                    <div class="d-flex align-items-center">
+                        <p class="fw-bold me-1 mb-0">Name:</p>
+                        <p class="mb-0">{{adminformname[i]}}</p>
+                    </div>
+                    <div class="d-flex align-items-center mt-1">
+                        <p class="fw-bold me-1 mb-0">ID:</p>
+                        <p class="mb-0">{{adminformid[i]}}</p>
+                    </div>
+                    <div class="d-flex align-items-center mt-1">
+                        <p class="fw-bold me-1 mb-0">Form:</p>
+                        <p class="mb-0">{{adminformproblem[i]}}</p>
+                    </div>
+                    <!-- Handling -->
+                    <div class="d-flex mt-1">
+                        <p class="fw-bold me-1 mb-0">Handling:</p>
+                        <div class="dropdown" (click)="toggleDropdown($event)">
+                            <button class="btn btn-outline-success dropdown-toggle" type="button" id="handlingDropdown{{i}}" data-bs-toggle="dropdown" aria-expanded="false">
+                                Handle by
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" (click)="selectedHandling('MySelf', i)">Handling by Myself</a></li>
+                                <li><a class="dropdown-item" (click)="selectedHandling('Others', i)">Handling by Others</a></li>
+                            </ul>
+                        </div>
+                        <!-- Button for Download -->
+                        <button *ngIf="!form.showSendTo" class="btn btn-success ms-auto" [innerText]="'Download'"></button>
+                    </div>
+                    
+                    <!-- Send To / Download -->
+                    <div class="d-flex mt-1" *ngIf="form.showSendTo">
+                        <!-- Label for Send To -->
+                        <p class="fw-bold me-1 mb-0" *ngIf="form.showSendTo">Send to:</p>
+                        <div class="dropdown">
+                            <!-- Send To Dropdown -->
+                            <button *ngIf="form.showSendTo" class="btn btn-success dropdown-toggle" type="button" id="sendToDropdown{{i}}" data-bs-toggle="dropdown" aria-expanded="false">
+                                sent to 
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">DR Mohamed El Mahalawy</a></li>
+                                <li><a class="dropdown-item" href="#">DR Mohanad Deif</a></li>
+                                <li><a class="dropdown-item" href="#">TA Shimaa Bahaa</a></li>
+                            </ul>
+                        </div>
+                        <!-- Button for Send -->
+                        <button *ngIf="form.showSendTo" class="btn btn-success ms-auto" [innerText]="'Send'"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
